@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=3 uid="uid://cjoja8bm5opyn"]
+
+[ext_resource type="Script" path="res://menu.gd" id="1_30k1f"]
+[ext_resource type="PackedScene" uid="uid://cahdjaly35tpi" path="res://back_ground.tscn" id="2_6gij7"]
+
+[node name="Menu" type="Node2D"]
+script = ExtResource("1_30k1f")
+
+[node name="Play" type="Button" parent="."]
+offset_left = 374.0
+offset_top = 222.0
+offset_right = 769.0
+offset_bottom = 322.0
+theme_override_font_sizes/font_size = 48
+text = "Play"
+
+[node name="Settings" type="Button" parent="."]
+offset_left = 374.0
+offset_top = 336.0
+offset_right = 769.0
+offset_bottom = 436.0
+theme_override_font_sizes/font_size = 48
+text = "Settings"
+
+[node name="Quit" type="Button" parent="."]
+offset_left = 374.0
+offset_top = 450.0
+offset_right = 769.0
+offset_bottom = 550.0
+theme_override_font_sizes/font_size = 48
+text = "Quit"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 447.0
+offset_top = 96.0
+offset_right = 702.0
+offset_bottom = 192.0
+theme_override_font_sizes/font_size = 70
+text = "Expoint"
+
+[node name="BackGround" parent="." instance=ExtResource("2_6gij7")]
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

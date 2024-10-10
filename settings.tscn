@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=3 uid="uid://dgedq5yjfgpba"]
+
+[ext_resource type="Script" path="res://settings.gd" id="1_oift1"]
+[ext_resource type="Texture2D" uid="uid://dp8iyqu42nbp" path="res://bg_menu/bg_menu/Bg.png" id="2_tuuki"]
+[ext_resource type="Texture2D" uid="uid://bd7weio210jbi" path="res://bg_menu/bg_menu/bgg (1).png" id="3_kigf0"]
+[ext_resource type="Texture2D" uid="uid://b4lnr1k6t5mb2" path="res://bg_menu/bg_menu/BG1.png" id="4_ynh0w"]
+[ext_resource type="Texture2D" uid="uid://bnemudsxs4lk" path="res://bg_menu/bg_menu/bgg (2).png" id="5_otmtn"]
+
+[node name="Settings" type="Node2D"]
+script = ExtResource("1_oift1")
+
+[node name="settings_bg" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="settings_bg"]
+
+[node name="Bg" type="Sprite2D" parent="settings_bg/ParallaxLayer"]
+position = Vector2(962, 726.5)
+scale = Vector2(3.33333, 4.48457)
+texture = ExtResource("2_tuuki")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="settings_bg"]
+
+[node name="Bgg(1)" type="Sprite2D" parent="settings_bg/ParallaxLayer2"]
+position = Vector2(959.944, 722.75)
+scale = Vector2(3.32658, 4.47685)
+texture = ExtResource("3_kigf0")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="settings_bg"]
+
+[node name="Bg1" type="Sprite2D" parent="settings_bg/ParallaxLayer3"]
+position = Vector2(958.222, 723.75)
+scale = Vector2(3.31867, 4.47068)
+texture = ExtResource("4_ynh0w")
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="settings_bg"]
+
+[node name="Bgg(2)" type="Sprite2D" parent="settings_bg/ParallaxLayer4"]
+position = Vector2(963, 727.5)
+scale = Vector2(3.31944, 4.49074)
+texture = ExtResource("5_otmtn")
+
+[node name="CheckButton" type="CheckButton" parent="."]
+offset_left = 494.0
+offset_top = 297.0
+offset_right = 624.0
+offset_bottom = 343.0
+text = "Fullscreen"
+
+[connection signal="toggled" from="CheckButton" to="." method="_on_check_button_toggled"]
