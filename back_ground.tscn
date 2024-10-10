@@ -14,8 +14,8 @@ motion_scale = Vector2(0.2, 0.2)
 motion_mirroring = Vector2(1150, 0)
 
 [node name="1" type="Sprite2D" parent="Sky"]
-position = Vector2(576, 324.5)
-scale = Vector2(1.99653, 1.99074)
+position = Vector2(576, 320.5)
+scale = Vector2(1.99653, 2.01543)
 texture = ExtResource("1_u2i53")
 
 [node name="Back_Clouds" type="ParallaxLayer" parent="."]
@@ -41,6 +41,6 @@ motion_scale = Vector2(0.9, 1)
 motion_mirroring = Vector2(1155, 0)
 
 [node name="Bg3" type="Sprite2D" parent="Way"]
-position = Vector2(575.5, 324)
-scale = Vector2(3.60937, 3.40625)
+position = Vector2(575.5, 327)
+scale = Vector2(3.60937, 3.375)
 texture = ExtResource("4_p30tn")
