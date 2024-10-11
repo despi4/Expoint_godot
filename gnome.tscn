@@ -3,8 +3,6 @@
 [ext_resource type="Script" path="res://gnome.gd" id="1_bs74t"]
 [ext_resource type="Texture2D" uid="uid://depim75ge6spb" path="res://Tiny RPG Character Asset Pack v1.02 -Free Soldier&Orc/gnomess-Idle-sheet.png" id="1_qxtwi"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wr0pb"]
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_4ulyt"]
 atlas = ExtResource("1_qxtwi")
 region = Rect2(0, 0, 100, 100)
@@ -55,17 +53,22 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wr0pb"]
+radius = 8.0
+height = 32.0
+
 [node name="gnome" type="CharacterBody2D"]
 script = ExtResource("1_bs74t")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CapsuleShape2D_wr0pb")
-
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-1, 5)
-scale = Vector2(1.255, 1.305)
+position = Vector2(3, 2)
+scale = Vector2(1.85719, 1.82906)
 sprite_frames = SubResource("SpriteFrames_c6ghp")
 animation = &"idle"
 autoplay = "idle"
-frame = 5
-frame_progress = 0.429163
+frame_progress = 0.787591
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_wr0pb")
