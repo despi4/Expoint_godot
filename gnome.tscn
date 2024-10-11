@@ -1,5 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://df6xfl88u4ruo"]
+[gd_scene load_steps=11 format=3 uid="uid://df6xfl88u4ruo"]
 
+[ext_resource type="Script" path="res://gnome.gd" id="1_bs74t"]
 [ext_resource type="Texture2D" uid="uid://depim75ge6spb" path="res://Tiny RPG Character Asset Pack v1.02 -Free Soldier&Orc/gnomess-Idle-sheet.png" id="1_qxtwi"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wr0pb"]
@@ -55,6 +56,7 @@ animations = [{
 }]
 
 [node name="gnome" type="CharacterBody2D"]
+script = ExtResource("1_bs74t")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_wr0pb")
@@ -65,4 +67,5 @@ scale = Vector2(1.255, 1.305)
 sprite_frames = SubResource("SpriteFrames_c6ghp")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.494464
+frame = 5
+frame_progress = 0.429163
