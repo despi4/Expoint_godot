@@ -1,0 +1,68 @@
+[gd_scene load_steps=10 format=3 uid="uid://df6xfl88u4ruo"]
+
+[ext_resource type="Texture2D" uid="uid://depim75ge6spb" path="res://Tiny RPG Character Asset Pack v1.02 -Free Soldier&Orc/gnomess-Idle-sheet.png" id="1_qxtwi"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wr0pb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ulyt"]
+atlas = ExtResource("1_qxtwi")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cvp84"]
+atlas = ExtResource("1_qxtwi")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3optd"]
+atlas = ExtResource("1_qxtwi")
+region = Rect2(200, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_85oln"]
+atlas = ExtResource("1_qxtwi")
+region = Rect2(300, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_35uy4"]
+atlas = ExtResource("1_qxtwi")
+region = Rect2(400, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u7fqq"]
+atlas = ExtResource("1_qxtwi")
+region = Rect2(500, 0, 100, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c6ghp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ulyt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cvp84")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3optd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_85oln")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_35uy4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u7fqq")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}]
+
+[node name="gnome" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_wr0pb")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, 5)
+scale = Vector2(1.255, 1.305)
+sprite_frames = SubResource("SpriteFrames_c6ghp")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.494464
